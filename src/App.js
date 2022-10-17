@@ -1,13 +1,12 @@
 import React from 'react'
 
-
+import SignIn from './components/SignIn'
 
 function App() {
 
   return (
     <div className="App">
-      Social Media App
-
+      <SignIn />
     </div>
   );
 }
