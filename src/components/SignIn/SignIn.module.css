@@ -1,0 +1,14 @@
+.Container {
+    margin-top: 100px;
+}
+
+.Form {
+    margin-top: 25px;
+    padding: 2rem;
+    border-radius: 1px;
+
+    width: 24rem;
+    min-height: 10rem;
+
+    color: var(--primary-color);
+}

@@ -1,6 +1,6 @@
 import { useContext, createContext, useEffect, useState } from 'react'
 import {
-    GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged
+    GoogleAuthProvider, signInWithPopup, signInAnonymously, signOut, onAuthStateChanged
 } from 'firebase/auth'
 
 import { auth } from './firebase'
@@ -10,14 +10,27 @@ const AuthContext = createContext()
 export const AuthContextProvider = ({ children }) => {
     const [user, setUser] = useState({})
 
-    const googleSignIn = () => {
-        const provider = new GoogleAuthProvider()
-        signInWithPopup(auth, provider)
+    
+    // Login Methods
+    const googleSignIn = async () => {
+        try {
+            const provider = new GoogleAuthProvider()
+            signInWithPopup(auth, provider)
+        } catch (error) {
+            console.log(error)
+        }
     }
 
-    const logOut = () => {
-        signOut(auth)
+    const anonymousSignIn = async () => {
+        try {
+            await signInAnonymously(auth)
+        } catch (error) {
+            console.log(error)
+        }
     }
+
+
+    const logOut = () => signOut(auth)
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -28,7 +41,7 @@ export const AuthContextProvider = ({ children }) => {
     }, [])
 
     return (
-        <AuthContext.Provider value={{ googleSignIn, logOut, user }}>
+        <AuthContext.Provider value={{ googleSignIn, anonymousSignIn, logOut, user }}>
             {children}
         </AuthContext.Provider>
     )

@@ -1,0 +1,65 @@
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.h100vh {
+    height: 100vh;
+}
+
+
+
+/* --- Google Button --- */
+.LoginBtn {
+    /* box-shadow: 1px 1px 1px grey; */
+    color: #444;
+    width: 20rem;
+    border-radius: 2.5px;
+    outline: none;
+
+    background: var(--secondary-color);
+    color: white;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem 1.25rem;
+    position: relative;
+
+    transition: 0.25s;
+}
+
+.LoginBtn:hover {
+    background: var(--secondary-color-hover);
+}
+
+.LoginBtn img {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    left: 0;
+    margin-left: 1.25rem;
+}
+
+.LoginBtn span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 1.25rem;
+    /* Use the Roboto font that is loaded in the <head> */
+}

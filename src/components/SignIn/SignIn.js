@@ -1,22 +1,27 @@
 import React from 'react'
 import { UserAuth } from '../../firebase/AuthContext'
 
-function SignIn() {
-    const { googleSignIn } = UserAuth()
+import styles from './SignIn.module.css'
 
-    const handleGoogleSignin = async () => {
-        try {
-            await googleSignIn()
-        } catch (error) {
-            console.log(error)
-        }
-    }
+import Google from '../../images/google.png'
+import incognito from '../../images/incognito.png'
+
+import Button from '../Button'
+
+function SignIn() {
+    const { googleSignIn, anonymousSignIn } = UserAuth()
+
 
     return (
-        <div>
-            Login Page
+        <div className={`${styles.Container} flex flex-center flex-column`}>
+            <h1>Log Into Social App</h1>
 
-            <button onClick={handleGoogleSignin}>Login With Google</button>
+
+            <form className={`${styles.Form} flex flex-column`}>
+                <Button img={Google} text="Continue with Google" onClick={googleSignIn} />
+                <br />
+                <Button img={incognito} text="Anonymous Login" onClick={anonymousSignIn} />
+            </form>
         </div>
 
     )
