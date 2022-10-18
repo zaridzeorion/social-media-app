@@ -1,0 +1,72 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.25rem 1rem;
+
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+
+    position: relative;
+}
+
+.Item {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem;
+}
+
+
+.UserLogo {
+    cursor: pointer;
+}
+
+.AccountModal {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+
+    right: 1.5rem;
+    top: 3.25rem;
+    padding: 1.25rem 1.75rem;
+
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgb(27, 25, 25);
+}
+
+.image {
+    width: 2rem;
+    border-radius: 50%;
+}
+
+
+.logoutBtn {
+    padding: 0.5rem 0.75rem;
+    padding-left: 0;
+
+    border-radius: 5px;
+
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: bold;
+
+    background: var(--secondary-color);
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: 0.1s;
+    opacity: 0.85;
+
+    margin-top: 0.5rem;
+
+    font-size: 1.05rem;
+}
+
+.logoutBtn:hover {
+    opacity: 1;
+}

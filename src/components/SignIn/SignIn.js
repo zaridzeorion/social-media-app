@@ -14,7 +14,7 @@ function SignIn() {
 
     return (
         <div className={`${styles.Container} flex flex-center flex-column`}>
-            <h1>Log Into Social App</h1>
+            <h1>Social Media</h1>
 
 
             <form className={`${styles.Form} flex flex-column`}>
