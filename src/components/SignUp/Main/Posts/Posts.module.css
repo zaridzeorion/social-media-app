@@ -1,0 +1,13 @@
+.Container {
+    margin: calc(var(--navbar-height) - 3.5rem) 24rem;
+    padding: 5rem 12rem;
+
+    transition: 0.6s;
+}
+
+@media only screen and (max-width: 1550px) {
+    .Container {
+        padding: 0;
+        margin: 7rem 1.5rem;
+    }
+}

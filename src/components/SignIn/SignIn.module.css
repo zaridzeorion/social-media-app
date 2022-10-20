@@ -1,5 +1,7 @@
 .Container {
     margin-top: 100px;
+    color: var(--secondary-color);
+
 }
 
 .Form {
@@ -9,6 +11,4 @@
 
     width: 24rem;
     min-height: 10rem;
-
-    color: var(--primary-color);
 }

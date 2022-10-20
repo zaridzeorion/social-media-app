@@ -2,6 +2,7 @@ import React from 'react'
 import { UserAuth } from '../../firebase/AuthContext'
 
 import Navbar from './Navbar'
+import Main from './Main'
 
 function SignUp() {
     const { user, logOut } = UserAuth()
@@ -10,7 +11,7 @@ function SignUp() {
     return (
         <div>
             <Navbar user={user} logOut={logOut} />
-
+            <Main />
         </div>
 
     )

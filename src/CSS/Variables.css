@@ -1,14 +1,26 @@
 :root {
-    --background-color: #0c1217;
-    --primary-color: #c9324c;
+    /* --background-color: #f0f3f4; */
+    --background-color: #f1f2f4;
 
-    --secondary-color: rgb(225, 225, 225, 1);
+    --primary-color: #fefeff;
+
+    --secondary-color: black;
     --secondary-color-hover: white;
+
 
     --btn-color: black;
     --btn-background-color: rgba(216, 216, 216, 0.9);
-    --btn-hover: rgba(216, 216, 216, 1);
+    --btn-hover: rgb(209, 209, 209);
 
 
+    /* Posts  */
+        /* container background */
+        --posts-bg: #f0f3f4;
+
+        --post-background-color: rgb(33, 31, 31);
+        --post-color: rgb(0, 0, 0);
+
+
+
+    --navbar-height: 7vh;
 }
-

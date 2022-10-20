@@ -13,4 +13,7 @@
 body {
   background-color: var(--background-color);
   color: var(--primary-color);
+
+  max-width: 2500px;
+  margin: 0 auto;
 }

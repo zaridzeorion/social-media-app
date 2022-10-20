@@ -8,10 +8,12 @@ function App() {
   const { user } = UserAuth()
   console.log(user) 
 
+  const userIsLoaded = user && user.isAnonymous || user && user.displayName
+
   return (
     <div className="App">
 
-      {user == null ? <SignIn /> : <SignUp />}
+      {user == null ? <SignIn /> : userIsLoaded && <SignUp />}
 
     </div>
   );
